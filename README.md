@@ -4,7 +4,7 @@
 </div>
 <hr>
 <div align="center">
-<a href="https://www.youtube.com/playlist?list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm" class='lista'>➡ Lista de Reproduccion ⬅</a>
+<a href="https://www.youtube.com/playlist?list=PLg9145ptuAij8vIQLU25f7sUSH4E8pdY5" class='lista'>➡ Lista de Reproduccion ⬅</a>
 <p class='Nombre'>
 <b>Curso visto por: BRYAN ALBERTO GUEVARA GUERRERO
 </b></p>
