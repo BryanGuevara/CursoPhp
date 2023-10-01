@@ -15,5 +15,5 @@ echo "</br></br>El Nombre de el Servidor: ";
 echo $_SERVER['SERVER_NAME'];
 
 $numero = $_GET['numero'];
-echo "El numero es:".$numero;
+echo "</br></br>El numero es:".$numero;
 ?>
