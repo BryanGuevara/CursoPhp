@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS OrmPhpDB;
+USE OrmPhpDB;
+
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(64) NOT NULL,
+    apellidos TEXT NOT NULL,
+    direccion TEXT NOT NULL
+);
+
+INSERT INTO clientes (nombres, apellidos, direccion)
+VALUES
+    ('Ana', 'López González', 'Calle 123, Ciudad A'),
+    ('Carlos', 'Martínez Pérez', 'Avenida 456, Ciudad B'),
+    ('Luisa', 'Rodríguez Sánchez', 'Calle 789, Ciudad C');
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_usuario VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL,
+    nombre_completo VARCHAR(128) NOT NULL
+);
+
+INSERT INTO usuarios (nombre_usuario, password, nombre_completo)
+VALUES
+    ('ana_lopez', 'clave123', 'Ana López González'),
+    ('carlos_martinez', 'clave456', 'Carlos Martínez Pérez'),
+    ('luisa_rodriguez', 'clave789', 'Luisa Rodríguez Sánchez');
