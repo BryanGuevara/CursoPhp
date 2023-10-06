@@ -63,5 +63,25 @@ class Orm{
         }
         $stm->execute();
     }
+
+    public function paginate($page, $limit){
+        $offset = ($page - 1) * $limit;
+        $rows = $this->db->query("SELECT COUNT(*) FROM {$this->table}")->fetchColumn();
+
+        $sql = "SELECT * FROM {$this->table} LIMIT {$offset},{$limit}";
+        $stm = $this->db->prepare($sql);
+        $stm->execute();
+
+        $pages = ceil($rows / $limit);
+        $data = $stm->fetchAll();
+
+        return [
+            'data' => $data,
+            'page' => $page,
+            'limit' => $limit,
+            'pages' => $pages,
+            'rows' => $rows
+        ];
+    }
 }
 ?>

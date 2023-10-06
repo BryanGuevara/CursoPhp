@@ -76,4 +76,19 @@
     echo '<h3>Añadir';
     echo '<h3>Clientes</h3>';
     echo 've a revisar la tabla en base de datos';
+
+    
+    
+    $usuario=$usuarioModel->paginate(1,2);
+    $clientes=$clientesModel->paginate(2,3);
+
+    echo '<h3>Paginado</h3>';
+    echo '<h3>Clientes [(pagina=2),(limit=3)]</h3>';
+    echo '<pre>';
+    var_dump($clientes);
+    echo '</pre>';
+    echo '<h3>Usuarios [(pagina=1),(limit=2)]</h3>';
+    echo '<pre>';
+    var_dump($usuario);
+    echo '</pre>';
   ?>
